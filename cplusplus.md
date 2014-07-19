@@ -10,16 +10,6 @@ C++ Coding Style
   - 최상위 네임스페이스는 생략한다.
   - 예) io_tcp_socket.cpp
 
-헤더 파일
-----
-* 모든 헤더 파일에는 define 가드 혹은 pragma once를 사용한다.
-  - define 가드의 이름은 _파일이름_H
-  - 일관성만 유지한다면 define 가드나 pragma once 어떤 쪽을 사용해도 관계 없지만, 한 프로젝트에서 두가지를 섞어서 사용하면 안된다.
-* 가능한 경우 include를 피하고 포워드 선언을 사용한다.
-* 헤더 파일에 using namespace 를 사용하지 않는다.
-* 헤더 파일에 변수 선언을 하지 않는다.
-* 상수는 namespace로 스코핑하여 정의한다.
-  - define은 매크로 용도로만 사용.
 
 
 네이밍
@@ -38,7 +28,20 @@ C++ Coding Style
 * length 대신 len을 사용한다.
 * size는 바이트 사이즈를 나타낼 때, len은 길이를 나타낼 때 사용한다.
   - string.size() != string.length()
+
   
+헤더 파일
+----
+* 모든 헤더 파일에는 define 가드 혹은 pragma once를 사용한다.
+  - define 가드의 이름은 _파일이름_H
+  - 일관성만 유지한다면 define 가드나 pragma once 어떤 쪽을 사용해도 관계 없지만, 한 프로젝트에서 두가지를 섞어서 사용하면 안된다.
+* 가능한 경우 include를 피하고 포워드 선언을 사용한다.
+* 헤더 파일에 using namespace 를 사용하지 않는다.
+* 헤더 파일에 변수 선언을 하지 않는다.
+* 상수는 namespace로 스코핑하여 정의한다.
+  - define은 매크로 용도로만 사용.
+
+
 클래스 정의
 ----
 * 메소드 인라이닝을 사용하지 않는다.
