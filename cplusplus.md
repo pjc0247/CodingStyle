@@ -78,7 +78,12 @@ C++ Coding Style
 * 메소드 인라이닝을 사용하지 않는다.
   - 1줄짜리 단순한 getter/setter 코드일지라도 cpp파일에 작성한다.
 * 파라미터 목록이 없을 경우에는 func(void) 대신 func()을 사용한다.
-
+* 이름 앞에 _이 붙은 메소드는 public으로 선언하지 않는다.
+  - 예)
+  ```C++
+  private:
+    void _setZOrder(int z);
+  ```
 
 클래스 구현
 ----
