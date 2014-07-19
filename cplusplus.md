@@ -41,7 +41,10 @@ C++ Coding Style
 키워드
 ----
 * 템플릿에 class대신 typename을 사용한다.
-  - 예) template <typename T>
+  - 예)
+  ```C++
+  template <typename T>
+  ```
 * 지원하는 경우, NULL대신 nullptr을 사용한다.
 * 경우와 판단에 따라 goto 키워드를 사용한다.
   - 단, 위로 역행하는 점프를 수행하는 goto는 사용하지 않는다.
