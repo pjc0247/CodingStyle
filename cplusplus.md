@@ -103,3 +103,5 @@ C++ Coding Style
     int fooBarVariable =
       getFooBarValueFromSomewhere();
   ```
+* 연산자 좌우로는 한 칸씩 띄운다.
+  - 예) a += b
