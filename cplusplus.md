@@ -147,7 +147,7 @@ C++ Coding Style
 ----
 * 유니코드 지원이 필요할 경우 가급적 WideCharacter보단 MultiBytes UTF-8을 사용한다.
   - wchar_t에 대한 정의는 플랫폼마다 다르기 때문.
-* const char * 대신 const std::string & 을 사용한다.
+* char * 대신 std::string 을 사용한다.
 * 상수 문자열들을 붙일 때에는 줄 바꿈을 사용한다.
   - 예)
   ```C++
