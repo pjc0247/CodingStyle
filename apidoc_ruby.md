@@ -1,4 +1,4 @@
-API Documentation 작성 양식
+Ruby API Documentation 작성 양식
 ====
 
 
