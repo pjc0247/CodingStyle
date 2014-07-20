@@ -53,6 +53,9 @@ C++ Coding Style
 * sizeof연산자에 변수 이름 대신 변수 타입을 넣는다.
   - sizeof(a)  (X)
   - sizeof(int)  (O)
+* for each는 사용하지 않는다.
+  - c++11의 Range-based for표준을 사용.
+* new대신 new(nothrow)를 사용한다.
 
 
 헤더 파일
@@ -93,8 +96,27 @@ C++ Coding Style
 * 생성자, 소멸자 안에 로직을 작성하지 않는다.
   - 생성자, 소멸자는 값을 반환할 수 없다 -> 예외에 대한 처리를 할 수 없기 때문에.
 * 값 대입 대신에 생성자의 초기화 리스트를 사용한다.
+* 생성자의 초기화 리스트에서는 연관 있는 프로퍼티끼리 묶음 지어서 줄 바꿈을 사용한다.
+  - 예)
+  ```C++
+  Monster::Monster() :
+    texture(nullptr),
+    hp(0), maxHp(0),
+    mp(0), maxMp(0),
+    level(0){
 
+  }
+  ```
+* 생성자의 초기화 리스트나, 인수 목록에서 줄 바꿈을 사용한 경우 첫 줄은 빈 줄로 한다.
+  - 예)
+  ```C++
+  void Monster::someFooMethod(
+    const string &foo, const string &bar,
+    int value1, float value2){
 
+    /* write here */
+  }
+  ```
 소스 코드
 ----
 * 한 줄이 80글자가 넘지 않도록 적절히 줄 바꿈을 사용한다.
@@ -113,3 +135,7 @@ C++ Coding Style
   ```
 * 연산자 좌우로는 한 칸씩 띄운다.
   - 예) a += b
+* 포인터의 애스터리스트(*)는 변수 이름의 바로 앞에 위치시킨다.
+  - 예) int *ptr;
+* 에일리어스의 앰퍼샌드(&)는 변수 이름의 바로 앞에 위치시킨다.
+  - 예) int &v
