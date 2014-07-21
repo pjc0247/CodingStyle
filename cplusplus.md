@@ -56,7 +56,7 @@ C++ Coding Style
 * for each는 사용하지 않는다.
   - c++11의 Range-based for표준을 사용.
 * new대신 new(nothrow)를 사용한다.
-
+* RTTI를 사용하지 않는다.
 
 헤더 파일
 ----
